@@ -105,7 +105,11 @@ export default function Contact() {
                       name='name'
                       required
                       placeholder='Enter your name'
-                      className="flex-1 bg-transparent text-white placeholder:text-[#535862] text-base leading-8 tracking-tight focus:outline-none"
+                      style={{
+                        WebkitBoxShadow: '0 0 0 1000px transparent inset',
+                        WebkitTextFillColor: 'white',
+                      }}
+                      className='flex-1 bg-transparent text-white placeholder:text-[#535862] text-base leading-8 tracking-tight focus:outline-none [&:-webkit-autofill]:bg-transparent [&:-webkit-autofill]:text-white [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_transparent]'
                     />
                   </div>
                 </div>
@@ -120,7 +124,11 @@ export default function Contact() {
                       name='email'
                       required
                       placeholder='Enter your email'
-                      className="flex-1 bg-transparent text-white placeholder:text-[#535862] text-base leading-8 tracking-tight focus:outline-none"
+                      style={{
+                        WebkitBoxShadow: '0 0 0 1000px transparent inset',
+                        WebkitTextFillColor: 'white',
+                      }}
+                      className='flex-1 bg-transparent text-white placeholder:text-[#535862] text-base leading-8 tracking-tight focus:outline-none [&:-webkit-autofill]:bg-transparent [&:-webkit-autofill]:text-white [&:-webkit-autofill]:shadow-[inset_0_0_0px_1000px_transparent]'
                     />
                   </div>
                 </div>
