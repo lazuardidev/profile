@@ -147,7 +147,7 @@ const Hero = () => {
             className='space-y-8 md:ml-0'
           >
             <p className='text-[#FDFDFD] text-xl font-normal tracking-tight'>
-              Hi. I&apos;m Edwin Anderson
+              Hi. I&apos;m Lazuardi
             </p>
 
             <div className='space-y-4'>
@@ -176,6 +176,10 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className='inline-flex items-center gap-3 bg-[#149BB0] px-8 py-4 text-white font-semibold hover:bg-[#149BB0]/90 transition-all duration-200 w-full md:w-auto justify-center'
             >
               <Mail className='w-6 h-6' />

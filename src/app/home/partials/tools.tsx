@@ -105,7 +105,13 @@ export const Tools = () => {
               </p>
             </div>
 
-            <button className='flex items-center justify-center gap-2 h-12 bg-[#149BB0] text-white font-semibold text-sm leading-7 tracking-tight hover:bg-[#149BB0]/90 transition-colors'>
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className='flex items-center justify-center gap-2 h-12 bg-[#149BB0] text-white font-semibold text-sm leading-7 tracking-tight hover:bg-[#149BB0]/90 transition-colors'
+            >
               <Mail className='w-6 h-6' />
               Send Message
             </button>
@@ -161,7 +167,13 @@ export const Tools = () => {
               ideas into real products.
             </p>
 
-            <button className='flex items-center gap-3 bg-[#149BB0] px-8 py-4 text-white font-semibold hover:bg-[#149BB0]/90 transition-colors w-full justify-center'>
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className='flex items-center gap-3 bg-[#149BB0] px-8 py-4 text-white font-semibold hover:bg-[#149BB0]/90 transition-colors w-full justify-center'
+            >
               <Mail className='w-6 h-6' />
               Send Message
             </button>

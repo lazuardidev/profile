@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 @config '../../tailwind.config.ts';
 
 @custom-variant dark (&:is(.dark *));
 
+/* Smooth scrolling for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   /* Font Family */
-  --font-family-primary: "Quicksand", sans-serif;
+  --font-family-primary: 'Quicksand', sans-serif;
 
   /* Font Weights */
   --font-weight-regular: 400;
@@ -59,9 +64,9 @@
 
   /* --- Colors --- */
   /* Primary Colors */
-  --color-primary-50: #AAF3FF;
-  --color-primary-100: #43AFC0;
-  --color-primary-200: #149BB0;
+  --color-primary-50: #aaf3ff;
+  --color-primary-100: #43afc0;
+  --color-primary-200: #149bb0;
   --color-primary-300: #075864;
 
   /* Neutral (Gray) Colors */

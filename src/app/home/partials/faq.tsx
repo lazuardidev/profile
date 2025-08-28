@@ -105,7 +105,7 @@ const Faq = () => {
                       >
                         <Image
                           src='/images/person-5.png'
-                          alt='Edwin'
+                          alt='person-5'
                           width={80}
                           height={80}
                           className='w-20 h-20 object-cover rounded-full'

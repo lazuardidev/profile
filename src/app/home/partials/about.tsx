@@ -83,7 +83,7 @@ const About: React.FC = () => {
             <div className='flex justify-center'>
               <Image
                 src='/images/people-working.jpg'
-                alt='Edwin working'
+                alt='working'
                 width={384} // w-96 is 24rem which is 384px
                 height={500}
                 className='object-cover rounded-lg'
@@ -221,7 +221,7 @@ const About: React.FC = () => {
           <div className='flex items-center gap-10'>
             <Image
               src='/images/people-working.jpg'
-              alt='Edwin working'
+              alt='working'
               width={384} // w-96 is 24rem which is 384px
               height={500}
               className='object-cover rounded-lg'

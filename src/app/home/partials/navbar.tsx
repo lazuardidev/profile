@@ -1,6 +1,5 @@
 'use client';
 import { Menu } from 'lucide-react';
-import Link from 'next/link';
 
 import {
   Sheet,
@@ -16,7 +15,7 @@ const Navbar = () => {
     <nav className='fixed top-4 left-4 right-4 md:top-8 md:left-1/2 md:transform md:-translate-x-1/2 md:right-auto md:w-auto z-50'>
       {/* Desktop Navigation */}
       <div className='hidden md:flex items-center gap-6 bg-black/20 backdrop-blur-md rounded-full px-6 py-3 border border-white/10'>
-        <div className='text-xl font-bold'>Edwin</div>
+        <div className='text-xl font-bold'>Lazuardi</div>
         <div className='flex items-center gap-6'>
           {navigationData.map((data) => (
             <a
@@ -33,7 +32,7 @@ const Navbar = () => {
       {/* Mobile Navigation using Sheet */}
       <Sheet>
         <div className='md:hidden flex items-center justify-between flex-row bg-black/40 backdrop-blur-xl rounded-full px-4 py-4 border border-white/10'>
-          <div className='text-xl font-bold text-white'>Edwin</div>
+          <div className='text-xl font-bold text-white'>Lazuardi</div>
           <SheetTrigger asChild>
             <Menu className='cursor-pointer' />
           </SheetTrigger>
@@ -45,7 +44,7 @@ const Navbar = () => {
           {/* Header */}
           <div className='relative flex items-center justify-between pl-6 pt-6 pr-6 rounded-t-2xl'>
             <div className='text-xl font-bold text-white drop-shadow-lg'>
-              Edwin
+              Lazuardi
             </div>
             <SheetClose asChild>
               <button className='text-white hover:text-gray-300 transition-colors p-1 rounded-full hover:bg-white/10'>
@@ -72,12 +71,12 @@ const Navbar = () => {
               {navigationData.map((data) => (
                 <li key={data.label}>
                   <SheetClose asChild>
-                    <Link
+                    <a
                       href={data.href}
                       className='text-white hover:text-[#149BB0] block text-lg font-medium transition-all duration-200 hover:bg-white/10 rounded-lg px-3 py-2'
                     >
                       {data.label}
-                    </Link>
+                    </a>
                   </SheetClose>
                 </li>
               ))}
