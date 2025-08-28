@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
-import { ReactNode } from "react";
-import Image from "next/image";
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
+import { ReactNode } from 'react';
+import Image from 'next/image';
 
 interface ModalProps {
   isOpen: boolean;
@@ -10,7 +10,7 @@ interface ModalProps {
   message: string;
   buttonText?: string;
   onButtonClick?: () => void;
-  type?: "success" | "error";
+  type?: 'success' | 'error';
   children?: ReactNode;
 }
 
@@ -19,9 +19,9 @@ export function Modal({
   onClose,
   title,
   message,
-  buttonText = "Back to Home",
+  buttonText = 'Back to Home',
   onButtonClick,
-  type = "success",
+  type = 'success',
   children,
 }: ModalProps) {
   const handleButtonClick = () => {
@@ -42,7 +42,7 @@ export function Modal({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className='fixed inset-0 bg-black/80 dark:bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
             onClick={onClose}
           >
             {/* Modal Container */}
@@ -51,33 +51,41 @@ export function Modal({
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 20 }}
               transition={{
-                type: "spring",
+                type: 'spring',
                 damping: 25,
                 stiffness: 400,
                 duration: 0.4,
               }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl overflow-hidden"
+              className='relative w-full max-w-md mx-auto rounded-3xl shadow-2xl overflow-hidden bg-white dark:bg-transparent'
               style={{
                 backgroundImage:
-                  type === "success"
-                    ? "url('/images/bg-modal-success.png')"
-                    : "url('/images/bg-modal-error.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                  'var(--tw-bg-opacity, 1) && 0, var(--tw-bg-opacity, 1) && 0, var(--tw-bg-opacity, 1) && 0',
               }}
             >
+              {/* Dark mode background */}
+              <div
+                className='absolute inset-0 dark:block hidden'
+                style={{
+                  backgroundImage:
+                    type === 'success'
+                      ? "url('/images/bg-modal-success.png')"
+                      : "url('/images/bg-modal-error.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              />
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
+                className='absolute top-4 right-4 z-20 p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-white/20 dark:hover:bg-white/30 transition-colors backdrop-blur-sm'
               >
-                <X className="w-5 h-5 text-white" />
+                <X className='w-5 h-5 text-gray-600 dark:text-white' />
               </button>
 
               {/* Content */}
-              <div className="relative z-10 px-8 py-12 text-center">
+              <div className='relative z-10 px-8 py-12 text-center'>
                 {/* Animated Icon with Circular Background */}
 
                 <motion.div
@@ -85,11 +93,11 @@ export function Modal({
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{
                     delay: 0.2,
-                    type: "spring",
+                    type: 'spring',
                     damping: 15,
                     stiffness: 300,
                   }}
-                  className="mx-auto mb-8 relative"
+                  className='mx-auto mb-8 relative'
                 >
                   {/* Main Icon Circle */}
                   <div
@@ -98,23 +106,23 @@ export function Modal({
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ delay: 0.4, type: "spring", damping: 20 }}
+                      transition={{ delay: 0.4, type: 'spring', damping: 20 }}
                     >
-                      {type === "success" ? (
+                      {type === 'success' ? (
                         <Image
-                          src="/icons/icon-modal-success.png"
-                          alt="Success"
+                          src='/icons/icon-modal-success.png'
+                          alt='Success'
                           width={144}
                           height={144}
-                          className="w-36 h-36 object-contain"
+                          className='w-36 h-36 object-contain'
                         />
                       ) : (
                         <Image
-                          src="/icons/icon-modal-error.png"
-                          alt="Error"
+                          src='/icons/icon-modal-error.png'
+                          alt='Error'
                           width={144}
                           height={144}
-                          className="w-36 h-36 object-contain"
+                          className='w-36 h-36 object-contain'
                         />
                       )}
                     </motion.div>
@@ -126,7 +134,7 @@ export function Modal({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-2xl font-bold text-white mb-4"
+                  className='text-2xl font-bold text-gray-900 dark:text-white mb-4'
                 >
                   {title}
                 </motion.h3>
@@ -136,7 +144,7 @@ export function Modal({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-gray-300 text-base mb-8 leading-relaxed"
+                  className='text-gray-600 dark:text-gray-300 text-base mb-8 leading-relaxed'
                 >
                   {message}
                 </motion.p>
@@ -147,7 +155,7 @@ export function Modal({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
-                    className="mb-8"
+                    className='mb-8'
                   >
                     {children}
                   </motion.div>
@@ -161,10 +169,10 @@ export function Modal({
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={handleButtonClick}
-                  className={`w-full py-4 px-6 text-white font-semibold rounded-2xl transition-all duration-200 shadow-lg ${
-                    type === "success"
-                      ? "bg-teal-600 hover:bg-teal-700"
-                      : "bg-red-600 hover:bg-red-700"
+                  className={`w-full py-4 px-6 font-semibold rounded-2xl transition-all duration-200 shadow-lg ${
+                    type === 'success'
+                      ? 'bg-teal-600 hover:bg-teal-700 text-white dark:bg-teal-600 dark:hover:bg-teal-700 dark:text-white'
+                      : 'bg-red-600 hover:bg-red-700 text-white dark:bg-red-600 dark:hover:bg-red-700 dark:text-white'
                   }`}
                 >
                   {buttonText}
@@ -182,16 +190,16 @@ export function Modal({
 export function SuccessModal({
   isOpen,
   onClose,
-  title = "Thanks for Reaching Out!",
+  title = 'Thanks for Reaching Out!',
   message = "I've received your message and will get back to you shortly.",
-  buttonText = "Back to Home",
+  buttonText = 'Back to Home',
   onButtonClick,
-}: Omit<ModalProps, "type" | "children">) {
+}: Omit<ModalProps, 'type' | 'children'>) {
   return (
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      type="success"
+      type='success'
       title={title}
       message={message}
       buttonText={buttonText}
@@ -204,16 +212,16 @@ export function SuccessModal({
 export function ErrorModal({
   isOpen,
   onClose,
-  title = "Message Not Sent",
+  title = 'Message Not Sent',
   message = "Something broke along the way. Let's try resending it.",
-  buttonText = "Try Again",
+  buttonText = 'Try Again',
   onButtonClick,
-}: Omit<ModalProps, "type" | "children">) {
+}: Omit<ModalProps, 'type' | 'children'>) {
   return (
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      type="error"
+      type='error'
       title={title}
       message={message}
       buttonText={buttonText}

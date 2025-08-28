@@ -37,12 +37,14 @@ const Faq = () => {
   ];
 
   return (
-    <section id='faq' className='py-20 px-6 lg:px-32'>
+    <section id='faq' className='py-20 px-6 lg:px-32 bg-white dark:bg-black'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center mb-12'>
           <div className='max-w-lg mb-6 lg:mb-0'>
-            <h2 className='text-5xl font-bold mb-4'>Still Got Questions?</h2>
-            <p className='text-[#A4A7AE]'>
+            <h2 className='text-5xl font-bold mb-4 text-gray-900 dark:text-white'>
+              Still Got Questions?
+            </h2>
+            <p className='text-gray-600 dark:text-[#A4A7AE]'>
               I&apos;ve listed answers to questions I often get as a frontend
               developer.
             </p>
@@ -51,10 +53,10 @@ const Faq = () => {
             <button
               onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
               disabled={currentIndex === 0}
-              className={`px-6 py-3 border border-[#22252B] bg-black transition-colors ${
+              className={`px-6 py-3 border border-gray-300 dark:border-[#22252B] bg-white dark:bg-black transition-colors ${
                 currentIndex === 0
                   ? 'text-gray-500 cursor-not-allowed'
-                  : 'text-white hover:bg-gray-900'
+                  : 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900'
               }`}
             >
               Prev
@@ -64,10 +66,10 @@ const Faq = () => {
                 setCurrentIndex(Math.min(faqs.length - 1, currentIndex + 1))
               }
               disabled={currentIndex === faqs.length - 1}
-              className={`px-6 py-3 border border-[#22252B] bg-black transition-colors ${
+              className={`px-6 py-3 border border-gray-300 dark:border-[#22252B] bg-white dark:bg-black transition-colors ${
                 currentIndex === faqs.length - 1
                   ? 'text-gray-500 cursor-not-allowed'
-                  : 'text-white hover:bg-gray-900'
+                  : 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900'
               }`}
             >
               Next
@@ -86,10 +88,10 @@ const Faq = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`p-5 border border-[#22252B] h-[466px] flex flex-col justify-between cursor-pointer overflow-hidden flex-shrink-0 transition-all duration-500 ease-in-out ${
+                className={`p-5 border border-gray-300 dark:border-[#22252B] h-[466px] flex flex-col justify-between cursor-pointer overflow-hidden flex-shrink-0 transition-all duration-500 ease-in-out ${
                   activeFAQ === index
                     ? 'bg-[#075864] w-[379px]'
-                    : 'bg-black w-[252px]'
+                    : 'bg-white dark:bg-black w-[252px]'
                 }`}
                 onClick={() => setActiveFAQ(activeFAQ === index ? -1 : index)}
               >
@@ -113,11 +115,11 @@ const Faq = () => {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                  <MessageSquareText className='w-10 h-10 text-white' />
+                  <MessageSquareText className='w-10 h-10 text-gray-600 dark:text-white' />
                 </div>
 
                 <div className='overflow-hidden'>
-                  <h3 className='text-2xl font-semibold mb-3 leading-tight'>
+                  <h3 className='text-2xl font-semibold mb-3 leading-tight text-gray-900 dark:text-white'>
                     {faq.question}
                   </h3>
                   <AnimatePresence>

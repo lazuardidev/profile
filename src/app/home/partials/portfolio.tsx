@@ -25,14 +25,14 @@ export default function Portfolio() {
   return (
     <section
       id='projects'
-      className='py-10 md:py-20 px-4 md:px-6 lg:px-32 bg-black'
+      className='py-10 md:py-20 px-4 md:px-6 lg:px-32 bg-white dark:bg-black'
     >
       <div className='container mx-auto'>
         <div className='text-center mb-6 md:mb-12'>
-          <h2 className='text-2xl md:text-5xl font-bold mb-2 md:mb-4 text-white leading-tight tracking-tight'>
+          <h2 className='text-2xl md:text-5xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white leading-tight tracking-tight'>
             Bridging Design and Development
           </h2>
-          <p className='text-[#A4A7AE] text-sm md:text-base leading-7'>
+          <p className='text-gray-600 dark:text-[#A4A7AE] text-sm md:text-base leading-7'>
             These are real projects where I implemented frontend interfaces with
             precision and attention to detail.
           </p>
@@ -59,10 +59,10 @@ export default function Portfolio() {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
               </div>
               <div className='space-y-1 md:space-y-2'>
-                <h3 className='text-lg md:text-xl font-semibold text-white group-hover:text-[#149BB0] transition-colors duration-300'>
+                <h3 className='text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-[#149BB0] transition-colors duration-300'>
                   {item.title}
                 </h3>
-                <p className='text-[#A4A7AE] text-sm md:text-base'>
+                <p className='text-gray-600 dark:text-[#A4A7AE] text-sm md:text-base'>
                   {item.year}
                 </p>
               </div>

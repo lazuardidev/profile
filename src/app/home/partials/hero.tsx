@@ -121,7 +121,7 @@ const Hero = () => {
         />
 
         {/* Dark overlay for content readability */}
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80' />
+        <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white/80 dark:via-black/50 dark:to-black/80' />
       </div>
 
       <div className='custom-container w-full flex flex-col md:flex-row md:flex-wrap md:items-center gap-7 overflow-hidden pt-30.5 md:pt-31.25'>
@@ -146,28 +146,28 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className='space-y-8 md:ml-0'
           >
-            <p className='text-[#FDFDFD] text-xl font-normal tracking-tight'>
+            <p className='text-gray-800 dark:text-[#FDFDFD] text-xl font-normal tracking-tight'>
               Hi. I&apos;m Lazuardi
             </p>
 
             <div className='space-y-4'>
               <div className='flex items-center'>
-                <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white tracking-tight leading-none'>
+                <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-900 dark:text-white tracking-tight leading-none'>
                   FRONT
                 </h1>
                 <h1
-                  className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal text-white tracking-tight leading-none'
+                  className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal text-gray-900 dark:text-white tracking-tight leading-none'
                   style={{ fontFamily: 'Charm, serif' }}
                 >
                   END
                 </h1>
               </div>
-              <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white tracking-tight leading-none'>
+              <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-900 dark:text-white tracking-tight leading-none'>
                 DEVELOPER
               </h1>
             </div>
 
-            <p className='text-[#A4A7AE] text-lg leading-relaxed max-w-xl'>
+            <p className='text-gray-600 dark:text-[#A4A7AE] text-lg leading-relaxed max-w-xl'>
               Passionate about frontend development, I focus on crafting digital
               products that are visually polished, performance-optimized, and
               deliver a consistent experience across all platforms.

@@ -62,12 +62,16 @@ export default function Testimonial() {
           className='w-12 h-12 rounded-full object-cover'
         />
         <div>
-          <div className='font-semibold'>{testimonial.author}</div>
-          <div className='text-sm text-[#FDFDFD]'>{testimonial.role}</div>
+          <div className='font-semibold text-gray-900 dark:text-white'>
+            {testimonial.author}
+          </div>
+          <div className='text-sm text-gray-600 dark:text-[#FDFDFD]'>
+            {testimonial.role}
+          </div>
         </div>
       </div>
       <svg
-        className='w-12 h-12 text-[#22252B]'
+        className='w-12 h-12 text-gray-300 dark:text-[#22252B]'
         viewBox='0 0 48 48'
         fill='currentColor'
       >
@@ -86,34 +90,40 @@ export default function Testimonial() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`p-5 border border-[#22252B] bg-black flex flex-col justify-between ${className} ${
+      className={`p-5 border border-gray-300 dark:border-[#22252B] bg-white dark:bg-black flex flex-col justify-between ${className} ${
         testimonial.featured
-          ? 'border-[#149BB0] bg-gradient-to-br from-[#149BB0]/0 to-[#149BB0]/20'
+          ? 'border-[#149BB0] bg-gradient-to-br from-[#149BB0]/5 to-[#149BB0]/10 dark:from-[#149BB0]/0 dark:to-[#149BB0]/20'
           : ''
       }`}
     >
       <div>
         {testimonial.metric && (
           <div className='mb-2'>
-            <div className='text-4xl font-bold'>{testimonial.metric}</div>
-            <div className='text-xl font-semibold mb-3'>
+            <div className='text-4xl font-bold text-gray-900 dark:text-white'>
+              {testimonial.metric}
+            </div>
+            <div className='text-xl font-semibold mb-3 text-gray-900 dark:text-white'>
               {testimonial.title}
             </div>
           </div>
         )}
         {renderStars(testimonial.rating)}
-        <p className='text-[#A4A7AE] leading-relaxed'>{testimonial.text}</p>
+        <p className='text-gray-600 dark:text-[#A4A7AE] leading-relaxed'>
+          {testimonial.text}
+        </p>
       </div>
       {renderAuthorInfo(testimonial)}
     </motion.div>
   );
 
   return (
-    <section className='py-20 px-6 lg:px-32'>
+    <section className='py-20 px-6 lg:px-32 bg-white dark:bg-black'>
       <div className='container mx-auto'>
         <div className='text-center mb-12 max-w-2xl mx-auto'>
-          <h2 className='text-5xl font-bold mb-4'>Trusted Voices</h2>
-          <p className='text-[#A4A7AE]'>
+          <h2 className='text-5xl font-bold mb-4 text-gray-900 dark:text-white'>
+            Trusted Voices
+          </h2>
+          <p className='text-gray-600 dark:text-[#A4A7AE]'>
             Here&apos;s what people say about working with me — across projects,
             teams, and timelines.
           </p>
