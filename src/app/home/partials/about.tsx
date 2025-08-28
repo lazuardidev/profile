@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const AchievementsSection: React.FC = () => {
+const About: React.FC = () => {
   return (
     <section
       id='about'
@@ -277,4 +277,4 @@ const AchievementsSection: React.FC = () => {
   );
 };
 
-export default AchievementsSection;
+export default About;

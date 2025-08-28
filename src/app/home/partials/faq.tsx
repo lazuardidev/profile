@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquareText } from 'lucide-react';
 
-const FaqSection = () => {
+const Faq = () => {
   const [activeFAQ, setActiveFAQ] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -150,4 +150,4 @@ const FaqSection = () => {
   );
 };
 
-export default FaqSection;
+export default Faq;

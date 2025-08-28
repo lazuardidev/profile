@@ -1,9 +1,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import React from 'react';
 
 import { Check, X } from 'lucide-react';
 
-export const ItSolutionSection: React.FC = () => {
+const Skills = () => {
   const { scrollY } = useScroll();
   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
 
@@ -184,3 +183,5 @@ export const ItSolutionSection: React.FC = () => {
     </section>
   );
 };
+
+export default Skills;

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import { Mail } from 'lucide-react';
 
-export const ProfesionalWork = () => {
+export const Tools = () => {
   const skills = [
     {
       name: 'HTML',
@@ -215,4 +215,4 @@ export const ProfesionalWork = () => {
   );
 };
 
-export default ProfesionalWork;
+export default Tools;

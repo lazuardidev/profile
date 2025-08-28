@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const SelectedWork = () => {
+const Experience = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(true);
 
@@ -169,4 +169,4 @@ const SelectedWork = () => {
   );
 };
 
-export default SelectedWork;
+export default Experience;

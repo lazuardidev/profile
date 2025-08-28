@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={clsx(quicksand.variable, 'antialiased')}>
         {children}
-        <Toaster /> {/* <- penting untuk render toast */}
+        <Toaster />
       </body>
     </html>
   );

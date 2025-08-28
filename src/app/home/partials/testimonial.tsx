@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 
-export default function TestimonialSection() {
+export default function Testimonial() {
   const testimonials = [
     {
       rating: 5,
