@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, Variants } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -16,7 +16,7 @@ const LazySection = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  variants?: any;
+  variants?: Variants;
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
